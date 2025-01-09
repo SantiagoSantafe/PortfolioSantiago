@@ -8,9 +8,9 @@ El proyecto utiliza la librería Kaboom.js para desarrollar juegos y está optim
 
 ## Créditos
 
-Este proyecto fue inspirado y desarrollado siguiendo la guía del video de [Chris Courses](https://www.youtube.com/watch?v=wy_fSStEgMs&list=WL&index=25&t=283s).
+Este proyecto fue inspirado y desarrollado siguiendo la guía del video de [FreeCodeCamp.org](https://www.youtube.com/watch?v=wy_fSStEgMs&list=WL&index=25&t=283s).
 
-Agradecimientos a Chris Courses por su excelente tutorial sobre el uso de Kaboom.js y su integración con Vite.
+Agradecimientos a jSLegendDev por su excelente tutorial sobre el uso de Kaboom.js y su integración con Vite.
 
 ## Tecnologías utilizadas
 
