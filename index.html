@@ -5,78 +5,140 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Santiago Santafe V1</title>
-    <script type="module" crossorigin src="./assets/index-BNSreAWF.js"></script>
+    <script type="module" crossorigin src="./assets/index-C_ZcAV5L.js"></script>
   </head>
   <body>
     <style>
-      @font-face {
-        font-family: monogram;
-        src: url(monogram.ttf);
-      }
+    @font-face {
+      font-family: monogram;
+      src: url(monogram.ttf);
+    }
 
-      body {
-        font-family: monogram, monospace;
-        font-size: 3rem;
-        overflow: hidden;
-      }
+    body {
+      font-family: monogram, monospace;
+      font-size: clamp(1.5rem, 2vw, 3rem);
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
 
-      #app {
-        width: 100%;
-        height: 100%;
-        position: relative;
-      }
+    #app {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
 
+    #textbox {
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      bottom: 2vh;
+      min-height: 15vh; /* Incrementar el alto mínimo */
+      background: white;
+      border-radius: 12px; /* Bordes más redondeados */
+      outline: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 1.5rem; /* Más espacio interno */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      word-spacing: 0.2rem;
+      filter: drop-shadow(0 0 0.75rem rgba(112, 112, 112, 0.5));
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+    }
+
+    .ui-text {
+      margin: 0;
+      -webkit-user-select: none;
+      user-select: none;
+      font-size: clamp(1.2rem, 3vw, 3rem); /* Texto más grande en pantallas pequeñas */
+      word-wrap: break-word;
+      width: 100%;
+    }
+
+    .ui-close-btn {
+      font-family: monogram, monospace;
+      border: none;
+      border-radius: 12px; /* Más redondeado */
+      padding: 0.8rem 1.2rem;
+      font-size: clamp(1rem, 2.5vw, 2rem);
+      background-color: #f0f0f0;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .ui-close-btn:hover {
+      background-color: #ddd;
+    }
+
+    .note {
+      position: absolute;
+      left: 5%;
+      top: 2vh;
+      display: flex;
+      flex-direction: column;
+      color: rgba(238, 238, 238, 0.9);
+      font-size: clamp(1rem, 2.5vw, 1.8rem);
+    }
+
+    #textbox-container {
+      display: none;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
       #textbox {
-        position: absolute;
-        left: 10%;
-        right: 10%;
-        bottom: 2vh;
-        min-height: 10vh;
-        background: white;
-        border-radius: 3px;
-        outline-style: solid;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        word-spacing: 0.2rem;
-        filter: drop-shadow(0 0 0.75rem rgb(112, 112, 112));
-        /* overflow: auto; */
+        left: 5%;
+        right: 5%;
+        min-height: 20vh; /* Más alto en tablets */
+        padding: 2rem; /* Espacio adicional */
       }
 
       .ui-text {
-        margin: 0;
-        -webkit-user-select: none;
-        user-select: none;
+        font-size: clamp(1.5rem, 4vw, 3.5rem); /* Texto más grande */
       }
 
       .ui-close-btn {
-        font-family: monogram, monospace;
-        border-style: none;
-        border-radius: 3px;
-        padding: 1rem;
-        font-size: inherit;
-      }
-
-      .btn-container {
-        align-self: flex-end;
-        margin-top: 1rem;
+        font-size: clamp(1.2rem, 3vw, 2.5rem);
+        padding: 0.8rem 1.5rem;
       }
 
       .note {
-        position: absolute;
-        left: 5%;
-        top: 1vh;
-        display: flex;
-        flex-direction: column;
-        color: rgb(238, 238, 238);
+        font-size: clamp(1.2rem, 3vw, 2rem);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      #textbox {
+        left: 2%;
+        right: 2%;
+        min-height: 25vh; /* Aún más alto en móviles */
+        padding: 2.5rem; /* Espacio adicional */
+        border-radius: 16px; /* Más redondeado */
       }
 
-      #textbox-container{
-        display: none;
+      .ui-text {
+        font-size: clamp(2rem, 5vw, 4rem); /* Texto claramente legible en móviles */
       }
+
+      .ui-close-btn {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        padding: 1rem 2rem; /* Botón más grande */
+      }
+
+      .note {
+        font-size: clamp(1.5rem, 4vw, 2.5rem); /* Nota más grande para mayor visibilidad */
+      }
+    }
+
     </style>
     <div id="app">
       <div>
